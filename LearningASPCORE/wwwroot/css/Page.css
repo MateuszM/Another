@@ -1,0 +1,76 @@
+﻿.page {
+    display: inline-block;
+    z-index: 1; /* the content page should go behind the cover pages */
+    position: fixed;
+    /* Size & Position */
+    top: 50%;
+    left: 50%;
+    width: 360px;
+    margin-left: -180px; /* half of width */
+    height: 500px;
+    margin-top: -250px; /* half of height */
+    /* Add some styling, so the pages are opaque */
+    background-color: #eee;
+    /* Hide backface of each page/side, so we don't see it when turned */
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    /* Set up animation */
+    transition: transform 1.0s ease;
+    -o-transition: transform 1.0s ease;
+    -moz-transition: transform 1.0s ease;
+    -webkit-transition: transform 1.0s ease;
+    /* Hide content that overflows the page */
+    overflow: hidden;
+}
+
+.page.even {
+    margin-left: -540px; /* 1,5 x width to position it left of odd pages */
+}
+page.odd {
+    transform-origin: 0% 0%;
+    -o-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    -moz-transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;
+}
+
+.page.even {
+    transform-origin: 100% 0%;
+    -o-transform-origin: 100% 0%;
+    -ms-transform-origin: 100% 0%;
+    -moz-transform-origin: 100% 0%;
+    -webkit-transform-origin: 100% 0%;
+    transform: rotateY(180deg); /* even pages start rotated (closed book) */
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+.page.odd.turn {
+    transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+}
+
+.page.even.turn {
+    transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+}
+#cover {
+    z-index: 3;
+}
+
+#cover_back {
+    z-index: 2;
+}
+button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
