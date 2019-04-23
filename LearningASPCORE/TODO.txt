@@ -1,0 +1,18 @@
+﻿  /* TO DO :
+    * Take From Database Only Needed Record , No need for whole list when controller is initialized every Request
+    * Make Saving Diary to Database 
+    * Make Diary For A User
+    * Retrieve Diary for user 
+	* Create proper main view
+	* Check Concurency Issues
+	* Add User
+	* Diary view only after login authorization
+	* Maybe Add Pagination for diary ?
+	
+	DONE : 
+	* DropDownList 
+	* RichTextEditor
+	* Fixed DropDownList
+	* Added Change Panges Buttons
+
+	

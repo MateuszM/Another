@@ -19,7 +19,7 @@ namespace LearningASPCORE.Controllers
     {
         private readonly ApplicationDbContext _context;
 
-   /* TO DO : Take From Database Only Needed Record , No need for whole list when controller is initialized every Request */
+ 
         
      
         private IList<DiaryModel> allPages = new List<DiaryModel>();
