@@ -1,25 +1,33 @@
-﻿@{
+﻿@model DiaryViewModel
+@{
     ViewData["Title"] = "Diary";
-
 }
 <head>
     <link rel="stylesheet" href="~/css/Page.css" />
-</head>
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+    <link rel="stylesheet" href="~/css/DiaryButtons.css" />
+    <link rel="stylesheet" href="~/css/mvc-grid.css" />
+    <script src="~/tinymce/tinymce.min.js"></script>
+    <script>tinymce.init({ selector: 'textarea' });</script>
+   </head>
+<form method="post" asp-action="Create" asp-controller="Diary">
+    <div class="form-group">
+        <label for="Title">Title</label>
+        <input type="text" class="form-control" id="Title" placeholder="Title" asp-for="Diary.PageTitle">
+    </div>
+    <div class="form-group">
+        <label for="Content">Content</label>
+        <textarea asp-for="Diary.ContentPage"></textarea>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+<div>
+    @{
+        if (!Model.CanChangePage)
+        {
+            <div class="ButtonRight"><a asp-action="GetNextPage" asp-route-diary=@Model.CurrentPage asp-controller="Diary" class="btn btn-info btn-lg disabled" role="button">NextPage</a></div>}
+        else
+        { <div class="ButtonRight"><a asp-action="GetNextPage" asp-route-diary=@Model.CurrentPage asp-controller="Diary" class="btn btn-info" role="button">NextPage</a></div>}
+    }
+    <div class="ButtonLeft"><a asp-action="GetPreviousPage" asp-route-diary=@Model.CurrentPage asp-controller="Diary" class="btn btn-info" role="button">PreviousPage</a></div>
+</div>
 
-<p>Use this area to provide additional information.</p>
-
-<div class="page odd" id="cover">My Diary</div>
-<div class="page even" id="cover_back">Let's start ! </div>
-<div class="page odd" id="content">This is where the content goes...</div>
-<!--<div class="page even" id="content">Content for even page ?</div> -->
-<a href="#" class="btn btn-info" role="button">NextPage</a>
-
-<ul class="pagination">
-    <li class=" active"><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-</ul>

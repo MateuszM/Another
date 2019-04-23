@@ -5,8 +5,8 @@ D:\Repo\LearningASPCORE\LearningASPCORE\bin\Debug\netcoreapp2.2\LearningASPCORE.
 D:\Repo\LearningASPCORE\LearningASPCORE\bin\Debug\netcoreapp2.2\LearningASPCORE.pdb
 D:\Repo\LearningASPCORE\LearningASPCORE\obj\Debug\netcoreapp2.2\LearningASPCORE.csprojResolveAssemblyReference.cache
 D:\Repo\LearningASPCORE\LearningASPCORE\obj\Debug\netcoreapp2.2\LearningASPCORE.csproj.CoreCompileInputs.cache
-D:\Repo\LearningASPCORE\LearningASPCORE\obj\Debug\netcoreapp2.2\UserSecretsAssemblyInfo.cs
 D:\Repo\LearningASPCORE\LearningASPCORE\obj\Debug\netcoreapp2.2\LearningASPCORE.AssemblyInfoInputs.cache
 D:\Repo\LearningASPCORE\LearningASPCORE\obj\Debug\netcoreapp2.2\LearningASPCORE.AssemblyInfo.cs
 D:\Repo\LearningASPCORE\LearningASPCORE\obj\Debug\netcoreapp2.2\LearningASPCORE.dll
 D:\Repo\LearningASPCORE\LearningASPCORE\obj\Debug\netcoreapp2.2\LearningASPCORE.pdb
+D:\Repo\LearningAspCore\LearningASPCORE\obj\Debug\netcoreapp2.2\UserSecretsAssemblyInfo.cs
