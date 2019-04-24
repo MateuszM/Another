@@ -1,0 +1,33 @@
+﻿@model DiaryViewModel
+@{
+    ViewData["Title"] = "Diary";
+}
+<head>
+    <link rel="stylesheet" href="~/css/Page.css" />
+    <link rel="stylesheet" href="~/css/DiaryButtons.css" />
+    <link rel="stylesheet" href="~/css/mvc-grid.css" />
+    <script src="~/tinymce/tinymce.min.js"></script>
+    <script>tinymce.init({ selector: 'textarea' });</script>
+   </head>
+<form method="post" asp-action="Create" asp-controller="Page">
+    <div class="form-group">
+        <label for="Title">Title</label>
+        <input type="text" class="form-control" id="Title" placeholder="Title" asp-for="Diary.PageTitle">
+    </div>
+    <div class="form-group">
+        <label for="Content">Content</label>
+        <textarea asp-for="Diary.ContentPage"></textarea>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+<div>
+    @{
+        if (!Model.CanChangePage)
+        {
+            <div class="ButtonRight"><a asp-action="GetNextPage" asp-route-diary=@Model.CurrentPage asp-controller="Page" class="btn btn-info btn-lg disabled" role="button">NextPage</a></div>}
+        else
+        { <div class="ButtonRight"><a asp-action="GetNextPage" asp-route-diary=@Model.CurrentPage asp-controller="Page" class="btn btn-info" role="button">NextPage</a></div>}
+    }
+    <div class="ButtonLeft"><a asp-action="GetPreviousPage" asp-route-diary=@Model.CurrentPage asp-controller="Page" class="btn btn-info" role="button">PreviousPage</a></div>
+</div>
+

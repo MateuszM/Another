@@ -8,11 +8,18 @@
 	* Add User
 	* Diary view only after login authorization
 	* Maybe Add Pagination for diary ?
-	
+	* Maybe Add cryptography for password?
+	* Create Diary
+	* Allow user to create diary , add/edit/delete pages
+	* 
 	DONE : 
 	* DropDownList 
 	* RichTextEditor
 	* Fixed DropDownList
 	* Added Change Panges Buttons
+	* Changed DiaryModel to PageModel
+	* Added DiaryModel
+	* Added GridMvc for Diary Page
+	
 
 	

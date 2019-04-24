@@ -1,33 +1,20 @@
-﻿@model DiaryViewModel
-@{
-    ViewData["Title"] = "Diary";
-}
+﻿@model IEnumerable<PageModel>
 <head>
-    <link rel="stylesheet" href="~/css/Page.css" />
-    <link rel="stylesheet" href="~/css/DiaryButtons.css" />
-    <link rel="stylesheet" href="~/css/mvc-grid.css" />
-    <script src="~/tinymce/tinymce.min.js"></script>
-    <script>tinymce.init({ selector: 'textarea' });</script>
-   </head>
-<form method="post" asp-action="Create" asp-controller="Diary">
-    <div class="form-group">
-        <label for="Title">Title</label>
-        <input type="text" class="form-control" id="Title" placeholder="Title" asp-for="Diary.PageTitle">
-    </div>
-    <div class="form-group">
-        <label for="Content">Content</label>
-        <textarea asp-for="Diary.ContentPage"></textarea>
-    </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-</form>
-<div>
-    @{
-        if (!Model.CanChangePage)
-        {
-            <div class="ButtonRight"><a asp-action="GetNextPage" asp-route-diary=@Model.CurrentPage asp-controller="Diary" class="btn btn-info btn-lg disabled" role="button">NextPage</a></div>}
-        else
-        { <div class="ButtonRight"><a asp-action="GetNextPage" asp-route-diary=@Model.CurrentPage asp-controller="Diary" class="btn btn-info" role="button">NextPage</a></div>}
-    }
-    <div class="ButtonLeft"><a asp-action="GetPreviousPage" asp-route-diary=@Model.CurrentPage asp-controller="Diary" class="btn btn-info" role="button">PreviousPage</a></div>
-</div>
+    <link href="~/Grid/Content/MvcGrid/mvc-grid.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <script src="~/Grid/Scripts/MvcGrid/mvc-grid.js"></script>
+    <script>
+         [].forEach.call(document.getElementsByClassName('mvc-grid'), function (element) {
+                           new MvcGrid(element);
+                       });
+    </script>
+</body>
+@(Html.Grid(Model).Build(GridColumn  => {GridColumn.Add(Model => Model.PageTitle).Titled("Title");
+    GridColumn.Add(Model => Model.Registration).Titled("Data");
+})
+
+
+
 
