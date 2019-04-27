@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningASPCORE", "LearningASPCORE\LearningASPCORE.csproj", "{CC5972ED-286F-4AE4-BBFE-80F29E441B89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearningASPCORE", "LearningASPCORE\LearningASPCORE.csproj", "{CC5972ED-286F-4AE4-BBFE-80F29E441B89}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3C168BE8-FDC0-4462-BDDA-8C85D72578FA}"
+	ProjectSection(SolutionItems) = preProject
+		TODO And Ideas.txt = TODO And Ideas.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
