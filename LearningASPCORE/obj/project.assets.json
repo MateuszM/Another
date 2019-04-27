@@ -2892,7 +2892,7 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
-      "NonFactors.Grid.Core.Mvc6/4.1.0": {
+      "NonFactors.Grid.Core.Mvc6/4.1.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.1.7",
@@ -2905,10 +2905,10 @@
           "lib/netstandard1.6/Mvc.Grid.Core.dll": {}
         }
       },
-      "NonFactors.Grid.Mvc6/4.1.0": {
+      "NonFactors.Grid.Mvc6/4.1.1": {
         "type": "package",
         "dependencies": {
-          "NonFactors.Grid.Core.Mvc6": "[4.1.0]"
+          "NonFactors.Grid.Core.Mvc6": "[4.1.1]"
         }
       },
       "NuGet.Frameworks/4.0.0": {
@@ -8093,22 +8093,22 @@
         "newtonsoft.json.bson.nuspec"
       ]
     },
-    "NonFactors.Grid.Core.Mvc6/4.1.0": {
-      "sha512": "u9MIVVqeD8MmKc7AMuP4kqX0TXLC0ZuUdD1VFyrWn/YAhL9ZflRg3ynK2mrus6Vcc0H49JOtJAqJUOG2/L3jDg==",
+    "NonFactors.Grid.Core.Mvc6/4.1.1": {
+      "sha512": "vBYdSv1UOL0q7Summ+xTVjuiIY+xEjRoTSULDxO78gsCmVodkTPIGzlfgNFpFObOGtj9dCSgmegcw9pcUKtedw==",
       "type": "package",
-      "path": "nonfactors.grid.core.mvc6/4.1.0",
+      "path": "nonfactors.grid.core.mvc6/4.1.1",
       "files": [
         ".signature.p7s",
         "lib/net46/Mvc.Grid.Core.dll",
         "lib/netstandard1.6/Mvc.Grid.Core.dll",
-        "nonfactors.grid.core.mvc6.4.1.0.nupkg.sha512",
+        "nonfactors.grid.core.mvc6.4.1.1.nupkg.sha512",
         "nonfactors.grid.core.mvc6.nuspec"
       ]
     },
-    "NonFactors.Grid.Mvc6/4.1.0": {
-      "sha512": "4ese9xx+CuIwTFLhbZLg0XGHJOC8MOv4PTHX+lcyD3XKsgapD7Hu69QCAAPvhWkWuSETp9e0N9p6LfpJbiFVqg==",
+    "NonFactors.Grid.Mvc6/4.1.1": {
+      "sha512": "vZnzW6iSr7qEXREhH4uLqsjdykmealoQzTpbrjUqcEIkw9RmQC0z8iaXioSuPMJouWSoTqZ9NbjZ7yWqMjexbA==",
       "type": "package",
-      "path": "nonfactors.grid.mvc6/4.1.0",
+      "path": "nonfactors.grid.mvc6/4.1.1",
       "files": [
         ".signature.p7s",
         "content/Content/MvcGrid/Fonts/GridGlyphs.woff",
@@ -8116,7 +8116,7 @@
         "content/Scripts/MvcGrid/mvc-grid.js",
         "content/Views/Shared/MvcGrid/_Grid.cshtml",
         "content/Views/Shared/MvcGrid/_Pager.cshtml",
-        "nonfactors.grid.mvc6.4.1.0.nupkg.sha512",
+        "nonfactors.grid.mvc6.4.1.1.nupkg.sha512",
         "nonfactors.grid.mvc6.nuspec"
       ]
     },
@@ -13283,7 +13283,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 2.2.3",
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.0",
-      "NonFactors.Grid.Mvc6 >= 4.1.0"
+      "NonFactors.Grid.Mvc6 >= 4.1.1"
     ]
   },
   "packageFolders": {
@@ -13332,7 +13332,7 @@
         "dependencies": {
           "NonFactors.Grid.Mvc6": {
             "target": "Package",
-            "version": "4.1.0"
+            "version": "4.1.1"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",

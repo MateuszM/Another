@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using LearningASPCORE.Models;
+using LearningASPCORE.Repository;
 
 namespace LearningASPCORE.Controllers
 {
@@ -11,10 +12,18 @@ namespace LearningASPCORE.Controllers
     {
         private IEnumerable<PageModel> pages;
         public IEnumerable<PageModel> Pages { get { return pages; } set { pages = value; } }
+        private IEnumerable<DiaryModel> diarys;
+        private IUnitOfWork _unitOfWork;
+        public IUnitOfWork UnitOfWork { get { return _unitOfWork; } set { _unitOfWork = value; } }
 
-        public IActionResult ShowPages()
+        public DiaryController(IUnitOfWork unitofwork)
         {
-            return View();
+            _unitOfWork = unitofwork;
+            
+        }
+        public IActionResult Diary()
+        {
+            return View(UnitOfWork.Repository<DiaryModel>().GetAllAsync().Result);
         }
 
     }

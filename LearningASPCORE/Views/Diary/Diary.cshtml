@@ -1,7 +1,7 @@
-﻿@model IEnumerable<PageModel>
+﻿@using NonFactors.Mvc.Grid;
+@model IEnumerable<DiaryModel>
 <head>
-    <link href="~/Grid/Content/MvcGrid/mvc-grid.css" rel="stylesheet" />
-    
+    <link href="~/Grid/Content/MvcGrid/mvc-grid.css" rel="stylesheet">
 </head>
 <body>
     <script src="~/Grid/Scripts/MvcGrid/mvc-grid.js"></script>
@@ -10,10 +10,14 @@
                            new MvcGrid(element);
                        });
     </script>
+  
 </body>
-@(Html.Grid(Model).Build(GridColumn  => {GridColumn.Add(Model => Model.PageTitle).Titled("Title");
-    GridColumn.Add(Model => Model.Registration).Titled("Data");
-})
+
+@(Html.Grid(Model).Build(columnn  => { columnn.Add(Model => Model.DiaryTitle).Titled("Title");
+   columnn.Add(Model => Model.Id).Titled("SecondTitle");
+
+}).Empty("No data found")
+    .Filterable())
 
 
 

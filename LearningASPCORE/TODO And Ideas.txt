@@ -8,18 +8,33 @@
 	* Add User
 	* Diary view only after login authorization
 	* Maybe Add Pagination for diary ?
-	* Maybe Add cryptography for password?
-	* Create Diary
+	* Maybe Add cryptography for password
 	* Allow user to create diary , add/edit/delete pages
-	* 
+	* Add Ninject
+	* Add Extension Method to GridMVC 
+	* Add UnitTest / mocking
+	
+
 	DONE : 
 	* DropDownList 
 	* RichTextEditor
 	* Fixed DropDownList
+
 	* Added Change Panges Buttons
 	* Changed DiaryModel to PageModel
 	* Added DiaryModel
 	* Added GridMvc for Diary Page
-	
 
+	* Fixed GridMVC
+	* Added RepositoryPattern and UnitOfWork
+	* Added New Migration , fixed Models , added simple data to database
+	* Create Diary 
+
+
+	
+	Problem : 
+	Should I add Second DB context ? 
+	Is UnitOfWork and repository pattern needed  ? //need diging
+	With one Db context (current default applicationDbContext) A can directly pass it to every controller , context is disposed per request. With unit of work it will be one db context.
+	Maybe good for mocking?
 	

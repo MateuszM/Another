@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "c2c6021b08ac0aa56a17fcf76f52435ade29928c"
+    "signature": "d3e1782784ce9ed594546f823d78d18e45157199"
   },
   "compilationOptions": {
     "defines": [
@@ -29,7 +29,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "2.2.3",
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.0",
-          "NonFactors.Grid.Mvc6": "4.1.0"
+          "NonFactors.Grid.Mvc6": "4.1.1"
         },
         "runtime": {
           "LearningASPCORE.dll": {}
@@ -3011,24 +3011,24 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
-      "NonFactors.Grid.Core.Mvc6/4.1.0": {
+      "NonFactors.Grid.Core.Mvc6/4.1.1": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.0.0",
           "System.Linq.Queryable": "4.3.0"
         },
         "runtime": {
           "lib/netstandard1.6/Mvc.Grid.Core.dll": {
-            "assemblyVersion": "4.1.0.0",
-            "fileVersion": "4.1.0.0"
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.1.1.0"
           }
         },
         "compile": {
           "lib/netstandard1.6/Mvc.Grid.Core.dll": {}
         }
       },
-      "NonFactors.Grid.Mvc6/4.1.0": {
+      "NonFactors.Grid.Mvc6/4.1.1": {
         "dependencies": {
-          "NonFactors.Grid.Core.Mvc6": "4.1.0"
+          "NonFactors.Grid.Core.Mvc6": "4.1.1"
         }
       },
       "NuGet.Frameworks/4.0.0": {
@@ -6082,19 +6082,19 @@
       "path": "newtonsoft.json.bson/1.0.1",
       "hashPath": "newtonsoft.json.bson.1.0.1.nupkg.sha512"
     },
-    "NonFactors.Grid.Core.Mvc6/4.1.0": {
+    "NonFactors.Grid.Core.Mvc6/4.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-u9MIVVqeD8MmKc7AMuP4kqX0TXLC0ZuUdD1VFyrWn/YAhL9ZflRg3ynK2mrus6Vcc0H49JOtJAqJUOG2/L3jDg==",
-      "path": "nonfactors.grid.core.mvc6/4.1.0",
-      "hashPath": "nonfactors.grid.core.mvc6.4.1.0.nupkg.sha512"
+      "sha512": "sha512-vBYdSv1UOL0q7Summ+xTVjuiIY+xEjRoTSULDxO78gsCmVodkTPIGzlfgNFpFObOGtj9dCSgmegcw9pcUKtedw==",
+      "path": "nonfactors.grid.core.mvc6/4.1.1",
+      "hashPath": "nonfactors.grid.core.mvc6.4.1.1.nupkg.sha512"
     },
-    "NonFactors.Grid.Mvc6/4.1.0": {
+    "NonFactors.Grid.Mvc6/4.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-4ese9xx+CuIwTFLhbZLg0XGHJOC8MOv4PTHX+lcyD3XKsgapD7Hu69QCAAPvhWkWuSETp9e0N9p6LfpJbiFVqg==",
-      "path": "nonfactors.grid.mvc6/4.1.0",
-      "hashPath": "nonfactors.grid.mvc6.4.1.0.nupkg.sha512"
+      "sha512": "sha512-vZnzW6iSr7qEXREhH4uLqsjdykmealoQzTpbrjUqcEIkw9RmQC0z8iaXioSuPMJouWSoTqZ9NbjZ7yWqMjexbA==",
+      "path": "nonfactors.grid.mvc6/4.1.1",
+      "hashPath": "nonfactors.grid.mvc6.4.1.1.nupkg.sha512"
     },
     "NuGet.Frameworks/4.0.0": {
       "type": "package",

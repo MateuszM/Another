@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace LearningASPCORE.Data.Migrations
+namespace LearningASPCORE.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -74,7 +74,25 @@ namespace LearningASPCORE.Data.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("AplicationUserId");
+
+                    b.Property<string>("DiaryTitle");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AplicationUserId");
+
+                    b.ToTable("Diary");
+                });
+
+            modelBuilder.Entity("LearningASPCORE.Models.PageModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
                     b.Property<string>("ContentPage");
+
+                    b.Property<int?>("DiaryModelId");
 
                     b.Property<bool>("IsChanged");
 
@@ -84,41 +102,9 @@ namespace LearningASPCORE.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Diary");
+                    b.HasIndex("DiaryModelId");
 
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            ContentPage = "Coś Się kończy coś się zaczyna",
-                            IsChanged = false,
-                            PageTitle = "My Diary",
-                            Registration = new DateTime(2008, 3, 9, 16, 5, 7, 123, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 2,
-                            ContentPage = "A moze nie ma tragedii?",
-                            IsChanged = false,
-                            PageTitle = "Rozdzial Pierwszy",
-                            Registration = new DateTime(2009, 3, 9, 16, 5, 7, 123, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 3,
-                            ContentPage = "Coś Jednak jest na rzeczy",
-                            IsChanged = false,
-                            PageTitle = "     ",
-                            Registration = new DateTime(2010, 3, 9, 16, 5, 7, 123, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 4,
-                            ContentPage = "Koniec nie ma juz nic",
-                            IsChanged = false,
-                            PageTitle = "....",
-                            Registration = new DateTime(2012, 3, 9, 16, 5, 7, 123, DateTimeKind.Unspecified)
-                        });
+                    b.ToTable("Pages");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -227,6 +213,20 @@ namespace LearningASPCORE.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("LearningASPCORE.Models.DiaryModel", b =>
+                {
+                    b.HasOne("LearningASPCORE.Models.ApplicationUser", "AplicationUser")
+                        .WithMany("Diarys")
+                        .HasForeignKey("AplicationUserId");
+                });
+
+            modelBuilder.Entity("LearningASPCORE.Models.PageModel", b =>
+                {
+                    b.HasOne("LearningASPCORE.Models.DiaryModel")
+                        .WithMany("Pages")
+                        .HasForeignKey("DiaryModelId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

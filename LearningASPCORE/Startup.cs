@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using LearningASPCORE.Data;
 using LearningASPCORE.Models;
 using LearningASPCORE.Services;
+using LearningASPCORE.Repository;
+using NonFactors.Mvc.Grid;
 
 namespace LearningASPCORE
 {
@@ -35,7 +37,9 @@ namespace LearningASPCORE
       
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
-
+            services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
+            services.AddTransient<IUnitOfWork,UnitOfWorkGeneric>();
+            services.AddMvcGrid();
             services.AddMvc();
         }
 

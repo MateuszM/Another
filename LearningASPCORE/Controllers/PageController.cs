@@ -44,8 +44,9 @@ namespace LearningASPCORE.Controllers
             return View();
         }
         [HttpGet]
-        public IActionResult Page(int page)
+        public IActionResult GetPage(int page)
         {
+            /*
             if(page < 0 )
             {
                 return RedirectToAction("PageDoesNotExist");
@@ -62,11 +63,13 @@ namespace LearningASPCORE.Controllers
             view.CurrentPage = page;
             view.Diary = AllPages[view.CurrentPage];
             return View(view);
+            */
+            return View();
         }
         [HttpPost]
         public IActionResult Create(DiaryPageViewModel DiaryView)
         {
-            AllPages[DiaryView.CurrentPage] = DiaryView.Diary;
+          
 
 
             return RedirectToAction("Diary");
