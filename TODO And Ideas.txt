@@ -13,6 +13,8 @@
 	* Add Ninject
 	* Add Extension Method to GridMVC 
 	* Add UnitTest / mocking
+	* Nested Grid and change buttons (https://github.com/NonFactors/MVC6.Grid/issues/20) will come in handy
+	* Add correct actions for buttons in controller 
 	
 
 	DONE : 
@@ -30,6 +32,8 @@
 	* Added New Migration , fixed Models , added simple data to database
 	* Create Diary 
 
+	* Added Button for mvcgrid as Html.ActionLink
+
 
 	
 	Problem : 
@@ -37,4 +41,5 @@
 	Is UnitOfWork and repository pattern needed  ? //need diging
 	With one Db context (current default applicationDbContext) A can directly pass it to every controller , context is disposed per request. With unit of work it will be one db context.
 	Maybe good for mocking?
-	
+	<a asp-action> and onclick with button didnt work for mvc grid , Why ?
+	Dont know how to use Mvc.Grid extensions for mvc grid. Need to take some time with it.  Deleted it as for now is no longer needed.

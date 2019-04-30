@@ -2,6 +2,7 @@
 @model IEnumerable<DiaryModel>
 <head>
     <link href="~/Grid/Content/MvcGrid/mvc-grid.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <script src="~/Grid/Scripts/MvcGrid/mvc-grid.js"></script>
@@ -14,8 +15,8 @@
 </body>
 
 @(Html.Grid(Model).Build(columnn  => { columnn.Add(Model => Model.DiaryTitle).Titled("Title");
-   columnn.Add(Model => Model.Id).Titled("SecondTitle");
-
+    columnn.Add(Model => Model.Id).Titled("SecondTitle");
+    columnn.Add(model => Html.ActionLink("PageNotFound", "PageDoesNotExist", "Diary", null, new { @class = "btn btn-primary btn-large" }))
 }).Empty("No data found")
     .Filterable())
 

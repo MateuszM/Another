@@ -25,6 +25,12 @@ namespace LearningASPCORE.Controllers
         {
             return View(UnitOfWork.Repository<DiaryModel>().GetAllAsync().Result);
         }
+        
+        public IActionResult PageDoesNotExist()
+        {
+            ModelState.AddModelError("Error", "Page Does Not Exist");
+            return View();
+        }
 
     }
 }
