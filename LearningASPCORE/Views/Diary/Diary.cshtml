@@ -1,4 +1,5 @@
 ﻿@using NonFactors.Mvc.Grid;
+@using LearningASPCORE.Extensions;
 @model IEnumerable<DiaryModel>
 <head>
     <link href="~/Grid/Content/MvcGrid/mvc-grid.css" rel="stylesheet">
@@ -7,19 +8,17 @@
 <body>
     <script src="~/Grid/Scripts/MvcGrid/mvc-grid.js"></script>
     <script>
-         [].forEach.call(document.getElementsByClassName('mvc-grid'), function (element) {
-                           new MvcGrid(element);
-                       });
+        [].forEach.call(document.getElementsByClassName('mvc-grid'), function (element) {
+            new MvcGrid(element);
+        });
     </script>
-  
+
 </body>
-
-@(Html.Grid(Model).Build(columnn  => { columnn.Add(Model => Model.DiaryTitle).Titled("Title");
+@(Html.Grid(Model).Build(columnn =>
+{
+    columnn.Add(Model => Model.DiaryTitle).Titled("Title");
     columnn.Add(Model => Model.Id).Titled("SecondTitle");
-    columnn.Add(model => Html.ActionLink("PageNotFound", "PageDoesNotExist", "Diary", null, new { @class = "btn btn-primary btn-large" }))
+    columnn.Add(model => Html.ActionLink("PageNotFound", "PageDoesNotExist", "Diary", null, new { @class = "btn btn-primary btn-large" }));
+    columnn.Add(model => Html.Grid(model.Pages).Build(columns => columns.Add(mod => mod.PageTitle).Titled("Page Title")));
 }).Empty("No data found")
-    .Filterable())
-
-
-
-
+.Filterable())

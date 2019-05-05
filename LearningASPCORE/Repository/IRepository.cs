@@ -13,5 +13,8 @@ namespace LearningASPCORE.Repository
         void Add(T entity);
         void Delete(T entity);
         Task<IEnumerable<T>> GetAllAsync();
+        IEnumerable<T> GetIncludes(params Expression<Func<T, Object>>[] includes);
+        Task<IEnumerable<T>> GetIncludesAsync(params Expression<Func<T, Object>>[] includes);
+
     }
 }

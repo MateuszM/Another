@@ -11,7 +11,7 @@
 	* Maybe Add cryptography for password
 	* Allow user to create diary , add/edit/delete pages
 	* Add Ninject
-	* Add Extension Method to GridMVC 
+	* Add Extension Method to GridMVC //Not Needed For now , maybe later ?
 	* Add UnitTest / mocking
 	* Nested Grid and change buttons (https://github.com/NonFactors/MVC6.Grid/issues/20) will come in handy
 	* Add correct actions for buttons in controller 
@@ -34,7 +34,12 @@
 
 	* Added Button for mvcgrid as Html.ActionLink
 
+	* Added dummy grid in column in mvc grid diary
+	* Added Include expressions in repository to query object with includes
+	
 
+	Idea : 
+	Its possible to make another grid in column i gridnonfactors. But it would be better to just make view to show separate grid with pages of diary.
 	
 	Problem : 
 	Should I add Second DB context ? 
@@ -43,3 +48,6 @@
 	Maybe good for mocking?
 	<a asp-action> and onclick with button didnt work for mvc grid , Why ?
 	Dont know how to use Mvc.Grid extensions for mvc grid. Need to take some time with it.  Deleted it as for now is no longer needed.
+ 
+	Should use async for example database calls ? Answer : https://stackoverflow.com/questions/30566848/when-should-i-use-async-controllers-in-asp-net-mvc/30567036
+	It will help with many databases , witch run for example iss server , but with one , it will get me nearly zero benefits. Iss can handle more  can handle far more concurrent requests than a single instance of SQL server. 

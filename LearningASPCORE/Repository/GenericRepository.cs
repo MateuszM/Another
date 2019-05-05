@@ -28,8 +28,27 @@ namespace LearningASPCORE.Repository
             }
               public async Task<IEnumerable<T>> GetAllAsync()
               {
-                   return await _objectSet.ToListAsync<T>();
+            return await _objectSet.ToListAsync();
               }
+        public IEnumerable<T> GetIncludes(params Expression<Func<T, Object>>[] includes)
+        {
+            IQueryable<T> query = _objectSet.Include(includes[0]);
+            foreach (var include in includes.Skip(1))
+            {
+                query = query.Include(include);
+            }
+            return query.ToList();
+        }
+        public async Task<IEnumerable<T>> GetIncludesAsync(params Expression<Func<T, Object>>[] includes)
+        {
+            IQueryable<T> query = _objectSet.Include(includes[0]);
+            foreach (var include in includes.Skip(1))
+            {
+                query = query.Include(include);
+            }
+            return await query.ToListAsync();
+        }
+    
         public IEnumerable<T> GetAll()
         {
             return _objectSet.ToList<T>();

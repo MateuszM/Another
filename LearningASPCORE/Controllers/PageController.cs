@@ -46,7 +46,7 @@ namespace LearningASPCORE.Controllers
         [HttpGet]
         public IActionResult GetPage(int page)
         {
-            /*
+            
             if(page < 0 )
             {
                 return RedirectToAction("PageDoesNotExist");
@@ -54,17 +54,17 @@ namespace LearningASPCORE.Controllers
             ViewData["Message"] = page.ToString();
             var view = new DiaryPageViewModel();
             view.CanChangePage = true;
-            if (page == .Count)
+           // if //(page == .Count)
             {
                 view.CanChangePage = false;
-                AllPages.Add(new PageModel());
+         //       AllPages.Add(new PageModel());
             }
 
             view.CurrentPage = page;
-            view.Diary = AllPages[view.CurrentPage];
+    //        view.Diary = AllPages[view.CurrentPage];
             return View(view);
-            */
-            return View();
+           
+           // return View();
         }
         [HttpPost]
         public IActionResult Create(DiaryPageViewModel DiaryView)
